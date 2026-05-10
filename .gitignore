@@ -1,6 +1,8 @@
 node_modules/
+.bin/
 data/*.json
 data/*.tmp
 uploads/
 .env
 *.log
+*.pid
