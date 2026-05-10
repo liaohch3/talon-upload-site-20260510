@@ -1,0 +1,17 @@
+{
+  "name": "talon-upload-site-20260510",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.1.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

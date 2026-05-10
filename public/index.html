@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>在线附件台</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="站点标题">
+      <a class="wordmark" href="/">在线附件台</a>
+      <div class="session-chip" id="sessionChip">未登录</div>
+    </header>
+
+    <main class="shell">
+      <section class="hero" aria-labelledby="pageTitle">
+        <div class="hero-copy">
+          <p class="date-line" id="dateLine">--</p>
+          <h1 id="pageTitle">注册，登录，上传附件。</h1>
+        </div>
+        <img class="poster" src="/assets/grid-poster.png" alt="">
+      </section>
+
+      <section class="panel auth-panel" id="authPanel" aria-labelledby="authTitle">
+        <div class="panel-head">
+          <h2 id="authTitle">账号</h2>
+          <div class="mode-switch" role="tablist" aria-label="账号模式">
+            <button class="mode-button active" type="button" data-mode="login" role="tab" aria-selected="true">登录</button>
+            <button class="mode-button" type="button" data-mode="register" role="tab" aria-selected="false">注册</button>
+          </div>
+        </div>
+
+        <form id="authForm" class="form-grid">
+          <label>
+            <span>账号</span>
+            <input name="username" autocomplete="username" minlength="3" maxlength="32" required>
+          </label>
+          <label>
+            <span>密码</span>
+            <input name="password" type="password" autocomplete="current-password" minlength="8" required>
+          </label>
+          <button class="primary-button" type="submit" id="authSubmit">登录</button>
+        </form>
+      </section>
+
+      <section class="panel app-panel hidden" id="appPanel" aria-labelledby="uploadTitle">
+        <div class="panel-head">
+          <h2 id="uploadTitle">附件</h2>
+          <button class="text-button" type="button" id="logoutButton">退出登录</button>
+        </div>
+
+        <form id="uploadForm" class="upload-form">
+          <label class="file-drop">
+            <span id="fileLabel">选择附件</span>
+            <input name="attachment" type="file" required>
+          </label>
+          <button class="primary-button" type="submit">上传</button>
+        </form>
+
+        <div class="file-list" id="fileList" aria-live="polite"></div>
+      </section>
+
+      <p class="status-line" id="statusLine" role="status"></p>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
