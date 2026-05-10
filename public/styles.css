@@ -252,6 +252,81 @@ button:focus-visible {
   font-weight: 800;
 }
 
+.file-preview {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+.preview-image,
+.preview-video {
+  width: 100%;
+  max-height: 420px;
+  border: 1px solid var(--rule);
+  background: var(--surface-soft);
+  object-fit: contain;
+}
+
+.preview-image {
+  display: block;
+}
+
+.preview-video {
+  aspect-ratio: 16 / 9;
+}
+
+.speed-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.speed-button {
+  min-width: 54px;
+  min-height: 36px;
+  border: 1px solid var(--ink);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.speed-button.active {
+  background: var(--ink);
+  color: var(--surface);
+}
+
+.user-list {
+  display: grid;
+  min-height: 96px;
+  background: var(--surface);
+}
+
+.user-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px 110px minmax(180px, 0.8fr) 120px;
+  gap: 16px;
+  align-items: end;
+  padding: 14px 18px;
+  border-top: 1px solid var(--rule);
+}
+
+.user-row:first-child {
+  border-top: 0;
+}
+
+.user-name {
+  overflow-wrap: anywhere;
+  font-weight: 800;
+}
+
+.inline-field {
+  gap: 6px;
+  padding: 0;
+  background: transparent;
+}
+
 .empty-state {
   padding: 24px 18px;
   color: var(--muted);
@@ -281,7 +356,8 @@ button:focus-visible {
   .hero,
   .form-grid,
   .upload-form,
-  .file-row {
+  .file-row,
+  .user-row {
     grid-template-columns: 1fr;
   }
 

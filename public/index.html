@@ -16,7 +16,7 @@
       <section class="hero" aria-labelledby="pageTitle">
         <div class="hero-copy">
           <p class="date-line" id="dateLine">--</p>
-          <h1 id="pageTitle">注册，登录，上传附件。</h1>
+          <h1 id="pageTitle">上传附件，预览图片和视频。</h1>
         </div>
         <img class="poster" src="/assets/grid-poster.png" alt="">
       </section>
@@ -58,6 +58,14 @@
         </form>
 
         <div class="file-list" id="fileList" aria-live="polite"></div>
+      </section>
+
+      <section class="panel admin-panel hidden" id="adminPanel" aria-labelledby="adminTitle">
+        <div class="panel-head">
+          <h2 id="adminTitle">用户</h2>
+        </div>
+
+        <div class="user-list" id="userList" aria-live="polite"></div>
       </section>
 
       <p class="status-line" id="statusLine" role="status"></p>
